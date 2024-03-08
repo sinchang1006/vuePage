@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* Development Company Tront Design Team © 2022~2023 */
+/* Copyright © HAEZOOM Co.,Ltd. All Rights Reserved. */
+/* Component Css */
+html,
+body,
+#app{width:100%;height:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:auto}
+
+/* placeholderstyle */
+input::placeholder,
+textarea::placeholder{color:#888;font-weight:300;letter-spacing:0;font-size:14px;}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{color:#888;font-weight:300;letter-spacing:0;font-size:14px;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{color:#888;font-weight:300;letter-spacing:0;font-size:14px;}
+input:-moz-input-placeholder,
+textarea:-moz-input-placeholder{color:#888;font-weight:300;letter-spacing:0;font-size:14px;}
+input.password{letter-spacing:8px;font-size:30px}
+input.password::placeholder{letter-spacing:0}
+input.password::-webkit-input-placeholder{letter-spacing:0}
+input.password:-ms-input-placeholder{letter-spacing:0}
+input.password:-moz-input-placeholder{letter-spacing:0}
+
+input[type=text]{font-size:14px!important}
+
+/* DragStyle */
+::-moz-selection{background:rgba(0,0,0,.4)}
+::selection{background:rgba(0,0,0,.4)}
+.wrap{height:100%;}
+    @import
+
+    //Mixin
+    '_mixin.scss',
+
+    //Theme
+    'theme.scss',
+
+    //Layout
+    'Layout.scss',
+
+    //LayerPopup
+    'LayerPopup.scss',
+
+    //Admin
+    'Admin/Common.scss',
+
+    //Login
+    'Login/Style.scss',
+
+    //ListProofSites
+    'ListProofSites/Style.scss',
+
+    //Graph
+    'Graph/Style.scss',
+
+    //DashBoard
+    'DashBoard/Common.scss',
+    'DashBoard/Style.scss',
+
+    //WidgetStyle
+    'DashBoard/WidgetStyle.scss';
+
+    @include scrollbarstyle;
+    @include place--holder;
+
+//ThemeColor
+// var(--네이밍)
+:root {
+    --color_white: #fff;
+    --color_gray_b:#7b7b7b;
+    --color_gray_a:#888;
+    --color_puple:#A73EE2;
+    --color_green:#1fbacc;
+    --color_red:#E41B7B;
+    --color_blue:#124BFF;
+    --color_yellow:#FFE380;
+    --color_orange:#f96a20;
+    --color_black:#000;
+}
+:root[data-dark=true] {
+    --color_white: #E41B7B;
+}
