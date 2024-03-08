@@ -1,4 +1,6 @@
 <template>
+    이거는 서브
+    <slot></slot>
 </template>
 
 <script setup>

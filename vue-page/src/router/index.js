@@ -6,7 +6,10 @@ const router = createRouter({
     {
       path: '/',
       name: 'main',
-      component: () => import("@/views/Main.vue")
+      component: () => import("@/views/Main.vue"),
+      meta:{
+        layout: "MainLayout"
+      }
     }
     // {
     //   path: '/about',
