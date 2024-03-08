@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
@@ -15,17 +15,22 @@
     3.코드 수정 후 커밋 페이지에 수정 된 소스 뜨면 커밋 입력란에 수정된 내용 입력 후 커밋 버튼 클릭 > Push 버튼 클릭하여 GitHub에 전달과 동시 GitHub 로그인
     -->
 
-    <!-- [로컬작업]
-    1.npm run dev > 로컬서버 브라우저 오픈 후 소스 코드 수정
+    <!-- [로컬작업>배포>GitHub컴파일]
+    1.npm run dev > 로컬서버 브라우저 오픈 후 vsCode에서 코드 수정
+    2.vsCode 터미널 열기(Ctrl+Shift+`) > npm run dev 상태 해제(ctrl+c)
+    3.npm run build(빌드파일 생성)
+    4.sourceTree에서 빌드파일(docs)및 수정 된 소스 파일 커밋 + Push
+    5.GitHub 접속 > 프로젝트 클릭 > Actions > build 상태 확인
     -->
 
-    <!-- [GitHub_컴파일]
-    0.수정 된 파일 GitHub 커밋 Push 완료 > npm run dev 상태 해제(ctrl+c)
-    2.docs 폴더의 파일 삭제
-    3.터미널 열기(Ctrl+Shift+`) > npm run build(빌드파일 생성) > docs 파일의 index.html 복사 붙여넣기 > 복사 된 indev.html 파일명을 404.html로 변경
+    <!-- [작업요약]
+    1.npm run dev 브라우저 Vue 화면 출력
+    2.소스코드수정
+    3.npm run build 빌드
+    4.소스트리 푸쉬
+    5.GitHub 프로젝트 접속 > 빌드상태 확인
     -->
     
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
