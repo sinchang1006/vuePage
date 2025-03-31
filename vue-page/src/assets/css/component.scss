@@ -1,6 +1,5 @@
 @charset "utf-8";
-/* Development Company Tront Design Team © 2022~2023 */
-/* Copyright © HAEZOOM Co.,Ltd. All Rights Reserved. */
+/* Development ShinChang © 2024~ */
 /* Component Css */
 html,
 body,
@@ -30,6 +29,9 @@ input[type=text]{font-size:14px!important}
     @import
 
     //Mixin
+    'reset.scss',
+
+    //Mixin
     '_mixin.scss',
 
     //Theme
@@ -39,44 +41,7 @@ input[type=text]{font-size:14px!important}
     'Layout.scss',
 
     //LayerPopup
-    'LayerPopup.scss',
-
-    //Admin
-    'Admin/Common.scss',
-
-    //Login
-    'Login/Style.scss',
-
-    //ListProofSites
-    'ListProofSites/Style.scss',
-
-    //Graph
-    'Graph/Style.scss',
-
-    //DashBoard
-    'DashBoard/Common.scss',
-    'DashBoard/Style.scss',
-
-    //WidgetStyle
-    'DashBoard/WidgetStyle.scss';
+    'LayerPopup.scss';
 
     @include scrollbarstyle;
     @include place--holder;
-
-//ThemeColor
-// var(--네이밍)
-:root {
-    --color_white: #fff;
-    --color_gray_b:#7b7b7b;
-    --color_gray_a:#888;
-    --color_puple:#A73EE2;
-    --color_green:#1fbacc;
-    --color_red:#E41B7B;
-    --color_blue:#124BFF;
-    --color_yellow:#FFE380;
-    --color_orange:#f96a20;
-    --color_black:#000;
-}
-:root[data-dark=true] {
-    --color_white: #E41B7B;
-}

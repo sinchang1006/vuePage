@@ -1,9 +1,7 @@
 <template>
 	<div class="container">
 		<main>
-
-			MAIN PAGE
-
+			UX
 		</main>
 		<QuickBanner></QuickBanner>
     </div>
@@ -13,7 +11,6 @@ import { ref } from 'vue';
 import QuickBanner from '@/views/QuickBanner.vue';
 
 export default {
-
-};
+}
 </script>
 <style lang="scss"></style>
