@@ -35,5 +35,5 @@ const toggleTheme = () => {
 <!-- [ImportScssSetting]
 1.임폴트 Scss 셋팅시 전 페이지에 반영되어야하므로 style 태그에 scoped가 없어야함 -->
 <style lang="scss">
-@import "@/assets/css/component.scss";
+@forward '@/assets/css/component';
 </style>

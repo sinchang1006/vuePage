@@ -1,7 +1,10 @@
 @charset "utf-8";
-/* Development Company Tront Design Team © 2022~2023 */
-/* Copyright © HAEZOOM Co.,Ltd. All Rights Reserved. */
+/* Development ShinChangEon © 2024~ */
 /* LayerPopup Css */
+
+// Mixin Load
+@use '/src/assets/css/mixin' as *;
+
 .mview{
     display:flex;
     visibility:hidden;

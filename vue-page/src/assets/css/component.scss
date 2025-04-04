@@ -1,6 +1,23 @@
 @charset "utf-8";
-/* Development ShinChang © 2024~ */
+/* Development ShinChangEon © 2024~ */
 /* Component Css */
+
+//Mixin
+@forward 'reset.scss';
+
+//Mixin
+@forward '_mixin.scss';
+
+//Theme
+@forward 'theme.scss';
+
+//Layout
+@forward 'Layout.scss';
+
+//LayerPopup
+@forward 'LayerPopup.scss';
+
+
 html,
 body,
 #app{width:100%;height:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:auto}
@@ -26,22 +43,3 @@ input[type=text]{font-size:14px!important}
 ::-moz-selection{background:rgba(0,0,0,.4)}
 ::selection{background:rgba(0,0,0,.4)}
 .wrap{height:100%;}
-    @import
-
-    //Mixin
-    'reset.scss',
-
-    //Mixin
-    '_mixin.scss',
-
-    //Theme
-    'theme.scss',
-
-    //Layout
-    'Layout.scss',
-
-    //LayerPopup
-    'LayerPopup.scss';
-
-    @include scrollbarstyle;
-    @include place--holder;

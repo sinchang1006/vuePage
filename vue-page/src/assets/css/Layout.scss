@@ -1,6 +1,10 @@
 @charset "UTF-8";
-/* Development ShinChang © 2024~ */
+/* Development ShinChangEon © 2024~ */
 /* LayoutStylesheet */
+
+// Mixin Load
+@use '/src/assets/css/mixin' as *;
+
 *::-webkit-scrollbar{width:6px;background-color:transparent}
 *::-webkit-scrollbar-track{background-color:#eee}
 *::-webkit-scrollbar-thumb{background-color:#888}
@@ -901,12 +905,12 @@ footer{
     transform:translate(-50%,-50%);
     margin-top:-27vh;
     color:var(--color__white_typeA);
-    font-size:5vh;
+    font-size:3vh;
     font-weight:300;
     transition:all 1s ease-in-out;
     transition-delay:1s;
     &::before{
-      content:'밧데리 다 댓습니다...';
+      content:'Position Bottom, Pad ON Button Click!';
     }
   }
   .pad__layout_background{
