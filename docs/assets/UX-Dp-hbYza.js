@@ -1,1 +1,0 @@
-import{_ as o,c as s,a as t,b as a,r,o as c}from"./index-Cd8hiwxx.js";const _={},i={class:"container"};function p(d,e,l,m,u,f){const n=r("QuickBanner");return c(),s("div",i,[e[0]||(e[0]=t("main",null," UX ",-1)),a(n)])}const k=o(_,[["render",p]]);export{k as default};

@@ -1,0 +1,1 @@
+import{_ as o,c as n,a as s,b as t,o as c,r as a}from"./index-CUNAIwIb.js";const r={},_={class:"container"},i=t("main",null," UX ",-1);function p(d,l,m,u,f,B){const e=a("QuickBanner");return c(),n("div",_,[i,s(e)])}const $=o(r,[["render",p]]);export{$ as default};
