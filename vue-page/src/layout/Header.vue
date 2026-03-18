@@ -1,17 +1,20 @@
 <template>
-  <div>
-    <Header></Header>
-    <component :is="layout">
-      <router-view></router-view>
-    </component>
-    <Footer></Footer>
-  </div>
+<header>
+	<h1><router-link to="/">SCE_Vue.js_UX</router-link></h1>
+	<nav>
+		<ul>
+			<li><router-link to="Pad">Pad_ui</router-link></li>
+			<li><router-link to="UX">Ux_guide</router-link></li>
+			<li><router-link to="/">Code_guide</router-link></li>
+			<li><router-link to="/">Vue.js</router-link></li>
+			<li><router-link to="/">All_menu</router-link></li>
+		</ul>
+	</nav>
+	<button type="button" id="mode__button" @click="toggleTheme" :class="{ 'dark-mode': data.theme === 'dark', 'light-mode': data.theme === 'white' }">{{ buttonText }}</button>
+</header>
 </template>
-
 <script setup>
 import { useRoute } from 'vue-router'
-import Header from '@/layout/Header.vue'
-import Footer from '@/layout/Footer.vue'
 import { computed, ref } from 'vue'
 
 const route = useRoute()
@@ -30,9 +33,4 @@ const toggleTheme = () => {
   document.documentElement.setAttribute('data-theme', data.value.theme);
 } // dataThememode
 </script>
-
-<!-- [ImportScssSetting]
-1.임폴트 Scss 셋팅시 전 페이지에 반영되어야하므로 style 태그에 scoped가 없어야함 -->
-<style lang="scss">
-@forward '@/assets/css/component';
-</style>
+<style lang="scss"></style>

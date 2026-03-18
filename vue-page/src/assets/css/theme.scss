@@ -158,4 +158,13 @@
 		}
 	}
 
+	@media screen and (max-width: 768px){}
+	@media screen and (max-width: 500px){}
 }
+
+/* MobileVer */
+@media screen and (min-width:2000px) and (orientation: portrait){}
+@media screen and (max-width:2000px) and (orientation: portrait){}
+@media screen and (max-width:1400px) and (orientation: portrait){}
+@media only screen and (min-device-width:360px) and (max-device-width:1024px) and (orientation: portrait){}
+@media only screen and (min-device-width:360px) and (max-device-width:600px) and (orientation: portrait){}

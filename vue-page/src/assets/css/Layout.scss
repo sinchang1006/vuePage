@@ -44,10 +44,6 @@ header{
   background-color: var(--color__black_typeA);
   color: var(--color__white_typeA);
   gap:30px;
-  opacity:.2;
-  &:hover{
-    opacity:1;
-  }
   a{
     color:var(--color__white_typeA);
   }
@@ -102,10 +98,6 @@ footer{
   width:140px;
   background-color:var(--color__black_typeA);
   color:var(--color__white_typeA);
-  opacity:.2;
-  &:hover{
-    opacity:1;
-  }
 }
 
 /* ItemActionEffect */
@@ -926,9 +918,16 @@ footer{
     transition:all 1s ease-in-out;
   }
 }
-@media screen and (max-width:1450px){}
-@media screen and (max-width:1200px){}
-@media screen and (max-width:1024px){}
-@media screen and (max-width:768px){}
-@media screen and (max-width:640px){}
-@media screen and (max-width:360px){}
+@media only screen and (min-device-width:360px) and (max-device-width:1024px) {}
+@media screen and (max-width:1920px) {
+  #app,
+  .wrap{
+    height:initial;
+  }
+}
+@media screen and (max-width:1200px) {}
+@media screen and (max-width:1080px) {}
+@media screen and (max-width:768px) {}
+@media screen and (max-width:640px) {}
+@media screen and (max-width:500px) {}
+@media screen and (max-width:400px) {}
