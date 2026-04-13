@@ -33,8 +33,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus {
 	font-family: 'Noto Sans KR', sans-serif,Dotum,Helvetica,AppleSDGothicNeo,sans-serif;
-	-webkit-text-fill-color:#000!important;
-	-webkit-box-shadow: 0 0 0px 1000px #f6f6f6 inset;
+	-webkit-text-fill-color:var(--color__black_typeA)!important;
+	-webkit-box-shadow: 0 0 0px 1000px var(-color__white_typeC) inset;
 	transition: background-color 90000s ease-in-out 0s;
 	font-size: 14px!important;
 }

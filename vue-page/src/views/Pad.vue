@@ -122,7 +122,7 @@
 					</div>
 				</div>
 				<h4 class="pad__layout_title"></h4>
-				<button type="button" id="pad__layout_button" @click="toggleSetup">{{ buttonText }}</button>
+				<button type="button" id="pad__layout_button" class="pad__button" @click="toggleSetup">{{ buttonText }}</button>
 				<div class="pad__layout_background"></div>
 			</div>
 
@@ -173,7 +173,7 @@ export default {
   },
   computed: {
     buttonText() {
-      return this.isSetup ? "OFF" : "Pad ON";
+      return this.isSetup ? "Pad OFF" : "Pad ON";
     }
   },
   mounted() {

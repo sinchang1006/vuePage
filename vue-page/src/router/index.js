@@ -17,9 +17,9 @@ const router = createRouter({
       component: () => import('@/views/Pad.vue')
     },
     {
-      path: '/UX',
-      name: 'UX',
-      component: () => import('@/views/UX.vue')
+      path: '/ComponentGuide',
+      name: 'ComponentGuide',
+      component: () => import('@/views/ComponentGuide.vue')
     },
     // {
     //   path: '/testpage',

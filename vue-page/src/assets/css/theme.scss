@@ -2,6 +2,7 @@
 /* Development ShinChangEon © 2024~ */
 /* ThemeStylesheet */
 
+
 //ThemeColor
 // var(--네이밍)
 :root {
@@ -51,6 +52,7 @@
 	--color__puple_typeD:#EBD3F8;
 	--color__puple_typeE:#FBF4FF;
 	--color__black_typeA:#000;
+	--color__black_typeAA:#030303;
 	--color__black_typeB:#111;
 	--color__black_typeC:#222;
 	--color__black_typeD:#333;
@@ -158,6 +160,7 @@
 		}
 	}
 
+<<<<<<< Updated upstream
 	@media screen and (max-width: 768px){}
 	@media screen and (max-width: 500px){}
 }
@@ -168,3 +171,32 @@
 @media screen and (max-width:1400px) and (orientation: portrait){}
 @media only screen and (min-device-width:360px) and (max-device-width:1024px) and (orientation: portrait){}
 @media only screen and (min-device-width:360px) and (max-device-width:600px) and (orientation: portrait){}
+=======
+}
+
+html,
+body,
+#app{width:100%;height:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:auto}
+
+/* placeholderstyle */
+input::placeholder,
+textarea::placeholder{color:var(--color__white_typeD);font-weight:300;letter-spacing:0;font-size:14px;}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{color:var(--color__white_typeD);font-weight:300;letter-spacing:0;font-size:14px;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{color:var(--color__white_typeD);font-weight:300;letter-spacing:0;font-size:14px;}
+input:-moz-input-placeholder,
+textarea:-moz-input-placeholder{color:var(--color__white_typeD);font-weight:300;letter-spacing:0;font-size:14px;}
+input.password{letter-spacing:8px;font-size:30px}
+input.password::placeholder{letter-spacing:0}
+input.password::-webkit-input-placeholder{letter-spacing:0}
+input.password:-ms-input-placeholder{letter-spacing:0}
+input.password:-moz-input-placeholder{letter-spacing:0}
+
+input[type=text]{font-size:14px!important}
+
+/* DragStyle */
+::-moz-selection{background:rgba(0,0,0,.4)}
+::selection{background:rgba(0,0,0,.4)}
+.wrap{height:100%;}
+>>>>>>> Stashed changes
