@@ -141,6 +141,7 @@
 			transform:perspective(9em) rotateY(0deg) rotateZ(0deg) rotateX(80deg);
 		}
 		#pad__layout_button{
+			color:var(--color__black_typeA);
 			&:hover{
 				opacity:.2;
 				border-color:var(--color__black_typeA);
@@ -156,6 +157,14 @@
 						}
 					}
 				}
+			}
+		}
+	}
+	footer *{
+		color:var(--color__black_typeF);
+		a{
+			&:hover{
+				color:var(--color__black_typeA);
 			}
 		}
 	}

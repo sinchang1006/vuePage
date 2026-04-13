@@ -8,10 +8,10 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-<<<<<<< Updated upstream
   base: "/vuePage",
   build: {
-    outDir: '../docs'
+    outDir: './docs',
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
@@ -21,19 +21,3 @@ export default defineConfig({
     }
   }
 })
-=======
-  resolve: {
-    alias: {
-
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      // 'src/assets/css'를 '@css'로 매핑
-
-      '@css': path.resolve(__dirname, 'src/assets/css')
-    }
-  },
-  base:"/vuePage",
-  build:{
-    outDir: '../docs'
-  },
-})
->>>>>>> Stashed changes

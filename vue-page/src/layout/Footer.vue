@@ -1,8 +1,8 @@
 <template>
 <footer>
-	<h6>(c) Copy Rights Shin.</h6>
+	<h6>UX/UI Engineer Portpolio,</h6>
 	<div>
-		<address><a href="mailTo:sinchang1004@naver.com">sincahng1004@naver.com</a></address>
+		<address><a href="mailTo:sinchang1005@naver.com">sinchang1005@naver.com</a></address>
 	</div>
 </footer>
 </template>

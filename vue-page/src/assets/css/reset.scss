@@ -7,9 +7,13 @@
 @font-face {font-family: 'GmarketSans';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');font-weight: 300;font-style: normal;}
 @font-face {font-family: 'GmarketSans';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');font-weight: 500;font-style: normal;}
 @font-face {font-family: 'GmarketSans';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');font-weight: 700;font-style: normal;}
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Playwrite+DK+Uloopet+Guides&display=swap');
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,
 img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,input,table,
-caption,tbody,tfoot,thead,tr,th,td, button{margin:0;padding:0;border:0;font-size:100%;font-family: 'GmarketSans', sans-serif,Dotum,Helvetica,AppleSDGothicNeo,sans-serif;background:transparent;text-align:justify;-webkit-margin:0;letter-spacing: -.01em;}
+caption,tbody,tfoot,thead,tr,th,td, button{margin:0;padding:0;border:0;font-size:100%;
+	font-family: 'GmarketSans', Exo2, sans-serif,Dotum,Helvetica,AppleSDGothicNeo,sans-serif;background:transparent;text-align:justify;-webkit-margin:0;
+letter-spacing:0;
+}
 input[type=text]{font-family:'Noto Sans KR';}
 textarea{font-family: 'GmarketSans', sans-serif,Dotum,Helvetica,AppleSDGothicNeo,sans-serif;letter-spacing:-.01em}
 select{margin:0;}

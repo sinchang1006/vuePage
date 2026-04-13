@@ -1,14 +1,15 @@
 <template>
 <header>
-	<h1><router-link to="/">SCE_Vue.js_UX</router-link></h1>
+	<h1><router-link to="/Home">HOME</router-link></h1>
 	<nav>
 		<ul>
-			<li><router-link to="Pad">Pad_ui</router-link></li>
-			<li><router-link to="UX">Ux_guide</router-link></li>
-			<li><router-link to="/">Code_guide</router-link></li>
-			<li><router-link to="/">Vue.js</router-link></li>
-			<li><router-link to="/">All_menu</router-link></li>
+			<li><router-link to="/Pad">PAD PLAY</router-link></li>
+			<li><router-link to="/UX">UX</router-link></li>
+			<li><router-link to="/">CODE</router-link></li>
+			<li><router-link to="/">VUE</router-link></li>
+			<li><router-link to="/">MENU</router-link></li>
 		</ul>
+		<button type="button"><i class="icobx all_menu"></i></button>
 	</nav>
 	<button type="button" id="mode__button" @click="toggleTheme" :class="{ 'dark-mode': data.theme === 'dark', 'light-mode': data.theme === 'white' }">{{ buttonText }}</button>
 </header>
@@ -26,7 +27,7 @@ const layout = computed(() => route.meta?.layout || defaultLayout)
 // dataThememode
 const data = ref({ theme: 'white' })
 const buttonText = computed(() => {
-  return data.value.theme === 'white' ? 'Dark Mode' : 'White Mode';
+  return data.value.theme === 'white' ? 'THEME DARK' : 'THEME WHITE';
 })
 const toggleTheme = () => {
   data.value.theme = data.value.theme === 'white' ? 'dark' : 'white';

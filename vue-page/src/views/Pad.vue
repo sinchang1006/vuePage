@@ -2,6 +2,14 @@
 	<div class="container">
 		<main>
 
+			<div class="page__title_bx">
+				<h2>PAD PLAY</h2>
+				<div>
+					<p>프로젝트명 : 디바이스 UI</p>
+					<p>기능구현 : 패드 ON/OFF 상태, 패드 HOME 버튼 동작, 각 아이콘 별 팝오버&amp;간략 기능 구현</p>
+				</div>
+			</div>
+
 			<!-- [CoinEffect] -->
 			<div class="modal__popup" style="display:none">
 				<!-- [노출]
@@ -33,6 +41,7 @@
 			</div>
 
 			<div class="pad__layout" :class="{ setup: isSetup }">
+				
 				<div class="pad__layout_pannel">
 					<div class="pad__layout_camera"><span></span></div>
 					<div class="pad__layout_screen">
@@ -121,8 +130,12 @@
 						<button type="button" @click="appViewCloseAll"></button>
 					</div>
 				</div>
+<<<<<<< Updated upstream
 				<h4 class="pad__layout_title"></h4>
 				<button type="button" id="pad__layout_button" class="pad__button" @click="toggleSetup">{{ buttonText }}</button>
+=======
+				<button type="button" id="pad__layout_button" @click="toggleSetup">{{ buttonText }}</button>
+>>>>>>> Stashed changes
 				<div class="pad__layout_background"></div>
 			</div>
 
@@ -148,9 +161,9 @@ export default {
   data() {
     return {
       isOpen: false,
-		isOpen2: false,
-		isOpen3: false,
-		isSetup: false,
+      isOpen2: false,
+      isOpen3: false,
+      isSetup: false,
       coins: [],
       cw: 0,
       ch: 0,
@@ -166,22 +179,32 @@ export default {
   watch: {
     isSetup(newValue) {
       if (!newValue) {
-        // isSetup이 false일 때 appViewCloseAll() 호출
         this.appViewCloseAll();
       }
     }
   },
   computed: {
     buttonText() {
+<<<<<<< Updated upstream
       return this.isSetup ? "Pad OFF" : "Pad ON";
+=======
+      return this.isSetup ? "PAD OFF" : "PAD ON";
+>>>>>>> Stashed changes
     }
   },
   mounted() {
     this.setupDetails();
+    // 마운트 시 애니메이션 시작 시도
     this.startAnimation();
   },
+  // 페이지를 나갈 때 애니메이션을 멈춰주는 것이 메모리 관리에 좋습니다.
+  beforeUnmount() {
+    if (this.raf) {
+      window.cancelAnimationFrame(this.raf);
+    }
+  },
   methods: {
-	toggleSetup() {
+    toggleSetup() {
       this.isSetup = !this.isSetup;
     },
     setupDetails() {
@@ -204,15 +227,28 @@ export default {
         }
       });
     },
+
+    /* --- 캔버스 애니메이션 관련 방어 코드 적용 --- */
+
     fixDpi() {
       const canvas = this.$refs.goldMoneyCanvas;
+      if (!canvas) return; // 캔버스가 없으면 실행 중단
+      
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * this.dpi;
       canvas.height = rect.height * this.dpi;
     },
+
     setupCoins() {
-      this.cw = this.$refs.goldMoneyCanvas.width;
-      this.ch = this.$refs.goldMoneyCanvas.height;
+      const canvas = this.$refs.goldMoneyCanvas;
+      if (!canvas) return; // 캔버스가 없으면 실행 중단
+
+      this.cw = canvas.width;
+      this.ch = canvas.height;
+      
+      // 코인이 이미 생성되어 있다면 중복 생성 방지
+      if (this.coins.length > 0) return;
+
       for (let i = 0; i < 20; i++) {
         this.coins.push({
           x: this.cw * 0.5,
@@ -224,19 +260,31 @@ export default {
         });
       }
     },
+
     coinDraw(coin) {
-      const ctx = this.$refs.goldMoneyCanvas.getContext("2d");
+      const canvas = this.$refs.goldMoneyCanvas;
+      if (!canvas) return;
+
+      const ctx = canvas.getContext("2d");
       ctx.beginPath();
       ctx.arc(coin.x, coin.y, coin.radius, 0, Math.PI * 2, true);
       ctx.closePath();
       ctx.fillStyle = coin.color;
       ctx.fill();
     },
+
     screenDraw() {
       const canvas = this.$refs.goldMoneyCanvas;
+      // 캔버스가 없으면 애니메이션 프레임을 요청하지 않고 종료
+      if (!canvas) {
+        this.raf = null;
+        return;
+      }
+
       const ctx = canvas.getContext("2d");
       this.fixDpi();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
       if (this.coins.length) {
         this.coins.forEach((coin, index) => {
           if (coin.y - coin.radius > canvas.height) {
@@ -253,26 +301,31 @@ export default {
       }
       this.raf = window.requestAnimationFrame(this.screenDraw);
     },
+
     startAnimation() {
-      if (!this.raf) {
+      // 캔버스가 존재할 때만 애니메이션 로직 가동
+      if (this.$refs.goldMoneyCanvas && !this.raf) {
         this.setupCoins();
         this.screenDraw();
       }
     },
+
+    /* --- 앱 뷰 제어 관련 --- */
+
     toggleClassToAppView() {
-		this.isOpen = !this.isOpen;
-	 },
-	 toggleClassToAppView2() {
-		this.isOpen2 = !this.isOpen2;
-	 },
-	 toggleClassToAppView3() {
-		this.isOpen3 = !this.isOpen3;
-	 },
-	 appViewCloseAll() {
-		this.isOpen = false;
-		this.isOpen2 = false;
-		this.isOpen3 = false;
-	 }
+      this.isOpen = !this.isOpen;
+    },
+    toggleClassToAppView2() {
+      this.isOpen2 = !this.isOpen2;
+    },
+    toggleClassToAppView3() {
+      this.isOpen3 = !this.isOpen3;
+    },
+    appViewCloseAll() {
+      this.isOpen = false;
+      this.isOpen2 = false;
+      this.isOpen3 = false;
+    }
   }
 };
 </script>

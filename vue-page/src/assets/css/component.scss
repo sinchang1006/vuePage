@@ -8,6 +8,9 @@
 //Mixin
 @forward '_mixin.scss';
 
+//Home
+@forward 'main/Style.scss';
+
 //Theme
 @forward 'theme.scss';
 
