@@ -4,7 +4,7 @@
 			<div class="main__layout_bx">
 
 				<div class="page__title_bx">
-					<h2>HOME1</h2>
+					<h2>HOME 21026.04.13</h2>
 					<div>
 						<p>프로젝트명 : 디바이스 UI</p>
 						<p>기능구현 : 패드 ON/OFF 상태, 패드 HOME 버튼 동작, 각 아이콘 별 팝오버&amp;간략 기능 구현</p>

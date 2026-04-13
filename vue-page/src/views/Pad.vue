@@ -130,12 +130,7 @@
 						<button type="button" @click="appViewCloseAll"></button>
 					</div>
 				</div>
-<<<<<<< Updated upstream
-				<h4 class="pad__layout_title"></h4>
-				<button type="button" id="pad__layout_button" class="pad__button" @click="toggleSetup">{{ buttonText }}</button>
-=======
 				<button type="button" id="pad__layout_button" @click="toggleSetup">{{ buttonText }}</button>
->>>>>>> Stashed changes
 				<div class="pad__layout_background"></div>
 			</div>
 
@@ -185,11 +180,7 @@ export default {
   },
   computed: {
     buttonText() {
-<<<<<<< Updated upstream
-      return this.isSetup ? "Pad OFF" : "Pad ON";
-=======
       return this.isSetup ? "PAD OFF" : "PAD ON";
->>>>>>> Stashed changes
     }
   },
   mounted() {
