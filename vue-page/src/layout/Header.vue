@@ -1,13 +1,13 @@
 <template>
 <header>
-	<h1><router-link to="/Home">HOME</router-link></h1>
+	<h1><router-link to="/Home">UI UX Engineer : SCE</router-link></h1>
 	<nav>
 		<ul>
-			<li><router-link to="/Pad">PAD PLAY</router-link></li>
-			<li><router-link to="/UX">UX</router-link></li>
-			<li><router-link to="/">CODE</router-link></li>
-			<li><router-link to="/">VUE</router-link></li>
-			<li><router-link to="/">MENU</router-link></li>
+			<li><router-link to="/Works">Works</router-link></li>
+			<li><router-link to="/WebviewLab">Webview LAB</router-link></li>
+			<li><router-link to="/UX" class="coming_soon">UX</router-link></li>
+			<li><router-link to="/" class="coming_soon">Etc</router-link></li>
+			<li><router-link to="/" class="coming_soon">Etc</router-link></li>
 		</ul>
 		<button type="button"><i class="icobx all_menu"></i></button>
 	</nav>

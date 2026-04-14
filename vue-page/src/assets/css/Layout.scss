@@ -132,10 +132,22 @@ header{
   left:10px;
   box-sizing:border-box;
   h2{
+    position:relative;
+    display:inline-block;
+    padding-right:100px;
     color:var(--color__white_typeA);
     font-family:Exo2;
     font-weight:600;
     font-size:80px;
+    span{
+      position:absolute;
+      bottom:20px;
+      right:0;
+      display:block;
+      font-size:12px;
+      font-weight:300;
+      letter-spacing:2px;
+    }
   }
   p{
     margin-left:4px;
@@ -346,10 +358,11 @@ footer{
   z-index:9999;
   width:100%;
   height:100%;
-  display:flex;
+  display:none;
   align-items:center;
   justify-content:center;
   transition:all .15s linear;
+  backdrop-filter:blur(0px);
   &:has(.coin__animation){
     backdrop-filter:blur(0);
     opacity:0;
@@ -359,24 +372,16 @@ footer{
     backdrop-filter:blur(3px);
     opacity:1;
   }
-  .coin__animation{
-    display:inline-flex;
-    flex-direction:column;
-    padding-top:10px;
-    height:280px;
-    width:280px;
-    background:var(--color__white_typeA);
-    box-sizing:border-box;
-    border-radius:50%;
-    box-shadow:0 10px 100px rgba(39, 33, 17, 0.08);
-    &.ani{
-      opacity:0;
-      transition:all .25s ease;
-      &.show{
+  &.show{
+    display:flex;
+    opacity:1;
+    backdrop-filter:blur(16px);
+    .coin__animation{
+      &.ani{
         opacity:1;
         .coin__animation_item {
           >div{
-            animation: coin-effect 2s, coin-spin 6s forwards ease-in-out;
+            animation: coin__effect 2s, coin__spin 6s forwards ease-in-out;
             opacity:1;
           }
         }
@@ -390,6 +395,21 @@ footer{
         }
       }
     }
+  }
+  .coin__animation{
+    display:inline-flex;
+    flex-direction:column;
+    padding-top:10px;
+    height:280px;
+    width:280px;
+    background:rgba(255,255,255,.95);
+    box-sizing:border-box;
+    border-radius:50%;
+    box-shadow:0 10px 100px rgba(39, 33, 17, 0.08);
+    &.ani{
+      opacity:0;
+      transition:all .1s ease;
+    }
     canvas{
       position:absolute;
       top:50px;
@@ -402,20 +422,10 @@ footer{
     .coin__animation_effect{
       position:relative;
       z-index:1;
-      &::before{
-        content:'';
-        position:absolute;
-        top:-44px;
-        left:calc(50% - 40px);
-        width:80px;
-        height:80px;
-        border-radius:80px;
-        @include image-style("profile_item_g.png", 100%, no-repeat, center, 0);
-      }
       >div{
         text-align:center;
         &:last-child{
-          animation: opacity__effect 1s forwards;
+          animation: opacity__effect .1s forwards;
           opacity:0;
           font-size:20px;
           font-weight:400;
@@ -482,36 +492,33 @@ footer{
       user-select:none;
       strong,
       span{
-        font-size:22px;
+        font-size:16px;
         font-weight:400;
         letter-spacing:.025em;
       }
       strong{
         display:flex;
         justify-content:center;
+        align-items:center;
+        height:36px;
         margin:0 auto;
         position:relative;
         top:8px;
         width:calc(100% - 120px);
-        transform: rotateX(90deg);
-        height:37px;
-        padding:12px 10px 0 10px;
-        border:1px solid rgba(0,0,0,.1);
-        border-radius:30px;
         background-color:var(--color__white_typeC);
         opacity:0;
-        transition:all .2s ease-in-out;
+        transition:all .015s ease-in-out;
         color:var(--color__black_typeA);
         span{
           margin-right:5px;
         }
       }
     }
-    @keyframes coin-spin {
+    @keyframes coin__spin {
       0%{transform:rotateY(0deg) scale(.2);opacity:0;}
       33%{transform:rotateY(720deg) scale(1.4);opacity:1;}
       100%{transform:rotateY(720deg) scale(1.4);opacity:1;}}
-    @keyframes coin-effect {
+    @keyframes coin__effect {
       0%{bottom:0;}
       17%{bottom:calc(100% - 60px);} 
       32%{bottom:0;}

@@ -3,13 +3,11 @@
 		<main>
 			<div class="main__layout_bx">
 
-				<div class="page__title_bx" :class="{ on: isTargetPage }">
-					<h2>News<span>2026.04.01</span></h2>
-					<div>
-						<p>프로젝트명 : 디바이스 UI</p>
-						<p>기능구현 : 패드 ON/OFF 상태, 패드 HOME 버튼 동작, 각 아이콘 별 팝오버&amp;간략 기능 구현</p>
-					</div>
-				</div>
+				<PageTitle 
+					title="Works" 
+					project="디바이스 UI" 
+					features="sd" 
+				/>
 
 				<h4>UX/UI Engineer 신창언입니다.</h4>
 				<p>메인 페이지는 기획 단계에 있으므로, PAD 메뉴로 접근해주세요.</p>
@@ -23,12 +21,7 @@
 		<QuickBanner></QuickBanner>
     </div>
 </template>
-<script>
-import { ref } from 'vue';
-import QuickBanner from '@/views/QuickBanner.vue';
-
-export default {
-
-};
+<script setup>
+import PageTitle from '@/layout/PageTitle.vue'
 </script>
 <style lang="scss"></style>

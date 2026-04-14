@@ -12,9 +12,16 @@ const router = createRouter({
       }
     },
     {
-      path: '/Pad',
-      name: 'Pad',
-      component: () => import('@/views/Pad.vue')
+      path: '/Works',
+      name: 'Works',
+      component: () => import('@/views/Works.vue'),
+      meta: { title: 'Works' } // 여기에 제목 정의
+    },
+    {
+      path: '/WebviewLab',
+      name: 'WebviewLab',
+      component: () => import('@/views/WebviewLab.vue'),
+      meta: { title: 'Webview LAB' } // 여기에 제목 정의
     },
     {
       path: '/ComponentGuide',
